@@ -1,0 +1,52 @@
+<?php
+/** @var \Yu\SocialLogin\Block\Account\SocialAccounts $block */
+/** @var \Magento\Framework\Escaper $escaper */
+$rows = $block->getRows();
+?>
+<div class="yu-social-accounts">
+    <?php if (!$rows): ?>
+        <p><?= $escaper->escapeHtml(__('Social login is not available.')) ?></p>
+    <?php else: ?>
+        <table class="data table">
+            <thead>
+            <tr>
+                <th><?= $escaper->escapeHtml(__('Provider')) ?></th>
+                <th><?= $escaper->escapeHtml(__('Status')) ?></th>
+                <th><?= $escaper->escapeHtml(__('Action')) ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($rows as $code => $row): ?>
+                <tr>
+                    <td><?= $escaper->escapeHtml($row['label']) ?></td>
+                    <td>
+                        <?php if ($row['account']): ?>
+                            <?= $escaper->escapeHtml(__('Linked')) ?>
+                            <?php if ($row['account']->getData('email')): ?>
+                                (<?= $escaper->escapeHtml($row['account']->getData('email')) ?>)
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <?= $escaper->escapeHtml(__('Not linked')) ?>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <?php if ($row['account']): ?>
+                            <form action="<?= $escaper->escapeUrl($block->getUnlinkUrl()) ?>" method="post">
+                                <?= $block->getBlockHtml('formkey') ?>
+                                <input type="hidden" name="provider" value="<?= $escaper->escapeHtmlAttr($code) ?>"/>
+                                <button type="submit" class="action secondary">
+                                    <span><?= $escaper->escapeHtml(__('Unlink')) ?></span>
+                                </button>
+                            </form>
+                        <?php else: ?>
+                            <a class="action primary" href="<?= $escaper->escapeUrl($row['link_url']) ?>">
+                                <span><?= $escaper->escapeHtml(__('Link')) ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php endif; ?>
+</div>

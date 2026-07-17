@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="yu_social_login" translate="label" sortOrder="900" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Social Media Login</label>
+            <tab>customer</tab>
+            <resource>Yu_SocialLogin::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="google" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create an OAuth client ID (type "Web application") in <a href="https://console.cloud.google.com/apis/credentials" target="_blank">Google Cloud Console &rarr; Credentials</a> and add the Redirect URI above to Authorized redirect URIs.]]></comment>
+                </field>
+            </group>
+            <group id="facebook" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create a Consumer app at <a href="https://developers.facebook.com/apps/" target="_blank">developers.facebook.com</a>, add the Facebook Login product and put the Redirect URI above into Valid OAuth Redirect URIs.]]></comment>
+                </field>
+            </group>
+            <group id="x_twitter" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>X (Twitter)</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create a Web App at <a href="https://developer.x.com/en/portal/projects-and-apps" target="_blank">developer.x.com</a>; in User authentication settings enable "Request email from users" (otherwise customers will be asked to enter their email manually) and add the Redirect URI above as the Callback URI.]]></comment>
+                </field>
+            </group>
+            <group id="github" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>GitHub</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create an OAuth App at <a href="https://github.com/settings/developers" target="_blank">GitHub &rarr; Settings &rarr; Developer settings &rarr; OAuth Apps</a> and use the Redirect URI above as the Authorization callback URL.]]></comment>
+                </field>
+            </group>
+            <group id="amazon" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Amazon</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create a Security Profile in the <a href="https://developer.amazon.com/loginwithamazon/console/site/lwa/overview.html" target="_blank">Login with Amazon Console</a> and add the Redirect URI above to Allowed Return URLs (Web Settings).]]></comment>
+                </field>
+            </group>
+            <group id="yahoo" translate="label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Yahoo</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create an app at <a href="https://developer.yahoo.com/apps/" target="_blank">developer.yahoo.com</a> with the OpenID Connect / Profile / Email permissions and use the Redirect URI above as the Redirect URI.]]></comment>
+                </field>
+            </group>
+            <group id="linkedin" translate="label" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>LinkedIn</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Create an app at <a href="https://www.linkedin.com/developers/apps" target="_blank">linkedin.com/developers</a>, add the "Sign In with LinkedIn using OpenID Connect" product and add the Redirect URI above to Authorized redirect URLs (Auth tab).]]></comment>
+                </field>
+            </group>
+            <group id="apple" translate="label" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Apple</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Services ID</label>
+                    <comment>The identifier of the Services ID, e.g. ua.net.yu.signin</comment>
+                </field>
+                <field id="team_id" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Team ID</label>
+                </field>
+                <field id="key_id" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Key ID</label>
+                </field>
+                <field id="key_content" translate="label comment" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Private Key</label>
+                    <comment>Content of the .p8 key file, including the BEGIN/END PRIVATE KEY lines. Stored encrypted.</comment>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Requires a paid Apple Developer account. In <a href="https://developer.apple.com/account/resources/identifiers/list/serviceId" target="_blank">Apple Developer &rarr; Identifiers</a> create a Services ID and a key with "Sign in with Apple" enabled; add the Redirect URI above as the Return URL.]]></comment>
+                </field>
+            </group>
+            <group id="microsoft" translate="label comment" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Microsoft</label>
+                <comment>The client secret has an expiry date — set a reminder to rotate it.</comment>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Application (client) ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="sort_order" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <validate>validate-digits</validate>
+                    <comment>Buttons with lower values appear first on the login and registration pages.</comment>
+                </field>
+                <field id="redirect_uri" translate="label" type="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect URI</label>
+                    <frontend_model>Yu\SocialLogin\Block\Adminhtml\Config\RedirectUri</frontend_model>
+                </field>
+                <field id="setup_note" translate="label comment" type="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to Get Credentials</label>
+                    <comment><![CDATA[Register the app in <a href="https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade" target="_blank">Microsoft Entra ID &rarr; App registrations</a> (account types: any directory + personal accounts) and add the Redirect URI above as a Web redirect URI.]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

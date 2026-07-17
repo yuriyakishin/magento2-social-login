@@ -1,0 +1,29 @@
+<?php
+/** @var \Yu\SocialLogin\Block\Social\EmailForm $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="yu-social-email-form">
+    <p>
+        <?= $escaper->escapeHtml(__(
+            'You have signed in via %1, but it did not share your email address. Please enter it to complete registration.',
+            $block->getProviderLabel()
+        )) ?>
+    </p>
+    <form action="<?= $escaper->escapeUrl($block->getFormAction()) ?>" method="post" class="form">
+        <?= $block->getBlockHtml('formkey') ?>
+        <div class="field email required">
+            <label class="label" for="yu-social-email">
+                <span><?= $escaper->escapeHtml(__('Email')) ?></span>
+            </label>
+            <div class="control">
+                <input type="email" name="email" id="yu-social-email" required
+                       class="input-text" autocomplete="email"/>
+            </div>
+        </div>
+        <div class="actions-toolbar">
+            <button type="submit" class="action primary">
+                <span><?= $escaper->escapeHtml(__('Complete Registration')) ?></span>
+            </button>
+        </div>
+    </form>
+</div>

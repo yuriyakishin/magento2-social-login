@@ -1,0 +1,9 @@
+<?php
+/** @var \Yu\SocialLogin\Block\Social\Button $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<a class="yu-social-buttons__button yu-social-buttons__button--microsoft"
+   href="<?= $escaper->escapeUrl($block->getAuthUrl()) ?>">
+    <span class="yu-social-buttons__icon"><svg viewBox="0 0 21 21" aria-hidden="true"><rect x="1" y="1" width="9" height="9" fill="#f25022"/><rect x="11" y="1" width="9" height="9" fill="#7fba00"/><rect x="1" y="11" width="9" height="9" fill="#00a4ef"/><rect x="11" y="11" width="9" height="9" fill="#ffb900"/></svg></span>
+    <span><?= $escaper->escapeHtml(__('Sign in with %1', $block->getLabel())) ?></span>
+</a>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="yu.social.buttons">
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.google"
+                   template="Yu_SocialLogin::social/buttons/google.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">google</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.facebook"
+                   template="Yu_SocialLogin::social/buttons/facebook.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">facebook</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.x_twitter"
+                   template="Yu_SocialLogin::social/buttons/x_twitter.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">x_twitter</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.github"
+                   template="Yu_SocialLogin::social/buttons/github.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">github</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.amazon"
+                   template="Yu_SocialLogin::social/buttons/amazon.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">amazon</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.yahoo"
+                   template="Yu_SocialLogin::social/buttons/yahoo.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">yahoo</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.linkedin"
+                   template="Yu_SocialLogin::social/buttons/linkedin.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">linkedin</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.apple"
+                   template="Yu_SocialLogin::social/buttons/apple.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">apple</argument>
+                </arguments>
+            </block>
+            <block class="Yu\SocialLogin\Block\Social\Button" name="yu.social.button.microsoft"
+                   template="Yu_SocialLogin::social/buttons/microsoft.phtml">
+                <arguments>
+                    <argument name="provider_code" xsi:type="string">microsoft</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

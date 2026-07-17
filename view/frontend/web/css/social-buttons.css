@@ -1,0 +1,145 @@
+.yu-social-buttons {
+    margin: 20px 0;
+    max-width: 320px;
+}
+
+.yu-social-buttons__divider {
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px;
+    color: #757575;
+}
+
+.yu-social-buttons__divider::before,
+.yu-social-buttons__divider::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid #ccc;
+}
+
+.yu-social-buttons__divider span {
+    padding: 0 10px;
+}
+
+.yu-social-buttons__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.yu-social-buttons__button:hover {
+    text-decoration: none;
+    opacity: 0.92;
+}
+
+.yu-social-buttons__icon svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.yu-social-buttons__button--google {
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    color: #3c4043;
+}
+
+.yu-social-buttons__button--facebook {
+    border: 1px solid #1877f2;
+    background: #1877f2;
+    color: #fff;
+}
+
+.yu-social-buttons__button--facebook:visited,
+.yu-social-buttons__button--facebook:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--google:visited,
+.yu-social-buttons__button--google:hover {
+    color: #3c4043;
+}
+
+.yu-social-buttons__button--x_twitter {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+}
+
+.yu-social-buttons__button--x_twitter:visited,
+.yu-social-buttons__button--x_twitter:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--github {
+    border: 1px solid #24292f;
+    background: #24292f;
+    color: #fff;
+}
+
+.yu-social-buttons__button--github:visited,
+.yu-social-buttons__button--github:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--amazon {
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    color: #131921;
+}
+
+.yu-social-buttons__button--amazon:visited,
+.yu-social-buttons__button--amazon:hover {
+    color: #131921;
+}
+
+.yu-social-buttons__button--yahoo {
+    border: 1px solid #6001d2;
+    background: #6001d2;
+    color: #fff;
+}
+
+.yu-social-buttons__button--yahoo:visited,
+.yu-social-buttons__button--yahoo:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--linkedin {
+    border: 1px solid #0a66c2;
+    background: #0a66c2;
+    color: #fff;
+}
+
+.yu-social-buttons__button--linkedin:visited,
+.yu-social-buttons__button--linkedin:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--apple {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+}
+
+.yu-social-buttons__button--apple:visited,
+.yu-social-buttons__button--apple:hover {
+    color: #fff;
+}
+
+.yu-social-buttons__button--microsoft {
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    color: #5e5e5e;
+}
+
+.yu-social-buttons__button--microsoft:visited,
+.yu-social-buttons__button--microsoft:hover {
+    color: #5e5e5e;
+}

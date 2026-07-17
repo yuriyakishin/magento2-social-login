@@ -1,0 +1,20 @@
+{
+    "yu_social_login": {
+        "column": {
+            "entity_id": true,
+            "customer_id": true,
+            "provider": true,
+            "social_id": true,
+            "email": true,
+            "created_at": true
+        },
+        "index": {
+            "YU_SOCIAL_LOGIN_CUSTOMER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "YU_SOCIAL_LOGIN_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true,
+            "YU_SOCIAL_LOGIN_PROVIDER_SOCIAL_ID": true
+        }
+    }
+}

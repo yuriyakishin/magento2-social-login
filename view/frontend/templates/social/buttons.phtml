@@ -1,0 +1,14 @@
+<?php
+/** @var \Yu\SocialLogin\Block\Social\Buttons $block */
+/** @var \Magento\Framework\Escaper $escaper */
+$buttonsHtml = trim($block->getSortedButtonsHtml());
+if ($buttonsHtml === '') {
+    return;
+}
+?>
+<div class="yu-social-buttons">
+    <div class="yu-social-buttons__divider">
+        <span><?= $escaper->escapeHtml(__('or')) ?></span>
+    </div>
+    <?= /* @noEscape */ $buttonsHtml ?>
+</div>

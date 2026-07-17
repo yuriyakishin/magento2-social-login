@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="yu_social_login_buttons"/>
+    <head>
+        <css src="Yu_SocialLogin::css/social-buttons.css"/>
+    </head>
+    <body>
+        <referenceContainer name="form.additional.info">
+            <block class="Yu\SocialLogin\Block\Social\Buttons" name="yu.social.buttons"
+                   template="Yu_SocialLogin::social/buttons.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

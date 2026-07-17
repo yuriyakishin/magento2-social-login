@@ -1,0 +1,49 @@
+{
+    "name": "yu-dev/module-social-login",
+    "description": "Social login for Magento 2 — sign in with Google, Facebook, Apple, X (Twitter), GitHub, LinkedIn, Microsoft, Amazon, Yahoo. Powered by HybridAuth.",
+    "type": "magento2-module",
+    "keywords": [
+        "magento",
+        "magento2",
+        "social-login",
+        "oauth",
+        "oauth2",
+        "hybridauth",
+        "sign-in-with-google",
+        "sign-in-with-apple",
+        "facebook-login",
+        "authentication",
+        "sso",
+        "ecommerce"
+    ],
+    "authors": [
+        {
+            "name": "Yuriy Akishin",
+            "email": "yuriy.akishin@gmail.com",
+            "homepage": "https://github.com/yuriyakishin"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/yuriyakishin/magento2-social-login/issues",
+        "source": "https://github.com/yuriyakishin/magento2-social-login"
+    },
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": "*",
+        "magento/module-customer": "*",
+        "magento/module-backend": "*",
+        "magento/module-store": "*",
+        "hybridauth/hybridauth": "^3.0"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yu\\SocialLogin\\": ""
+        }
+    }
+}
