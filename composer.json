@@ -1,6 +1,6 @@
 {
     "name": "yu-dev/module-social-login",
-    "description": "Social login for Magento 2 — sign in with Google, Facebook, Apple, X (Twitter), GitHub, LinkedIn, Microsoft, Amazon, Yahoo. Powered by HybridAuth.",
+    "description": "Magento 2 social login: customer sign-in and registration via Google, Facebook, Apple, X (Twitter), GitHub, LinkedIn, Microsoft, Amazon and Yahoo — free, open source, powered by HybridAuth.",
     "type": "magento2-module",
     "keywords": [
         "magento",
@@ -12,6 +12,7 @@
         "sign-in-with-google",
         "sign-in-with-apple",
         "facebook-login",
+        "customer-login",
         "authentication",
         "sso",
         "ecommerce"
