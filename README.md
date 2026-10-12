@@ -1,8 +1,8 @@
 # Magento 2 Social Login
 
-<a href="https://yu.net.ua/customer/account/login/" target="_blank" rel="noopener noreferrer"><img alt="Live demo" src="https://img.shields.io/badge/demo-yu.net.ua-2ea44f?style=for-the-badge"></a>
+<a href="https://shop.yu.net.ua/customer/account/login/" target="_blank" rel="noopener noreferrer"><img alt="Live demo" src="https://img.shields.io/badge/demo-shop.yu.net.ua-2ea44f?style=for-the-badge"></a>
 
-**🔗 Demo: <a href="https://yu.net.ua/customer/account/login/" target="_blank" rel="noopener noreferrer">yu.net.ua</a>**
+**🔗 Demo: <a href="https://shop.yu.net.ua/customer/account/login/" target="_blank" rel="noopener noreferrer">shop.yu.net.ua</a>**
 
 Free, open-source Magento 2 extension: customers sign in and register with
 Google, Facebook, Apple, X (Twitter), GitHub, LinkedIn, Microsoft, Amazon or
